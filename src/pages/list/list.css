@@ -1,0 +1,102 @@
+.lessonList{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+.listContainer {
+    display: block;
+    flex-direction: column;
+    max-width: 40%;
+    margin: 10px;
+}
+
+.lessonTitle {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.lessonTitle:hover {
+    color:rgb(109, 109, 182);
+    border: 1px solid rgb(204, 228, 253);
+}
+
+.mainTitleContainer {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid rgb(109, 109, 182);
+}
+
+.lessonContent {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contentBlock {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.mainTitle {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainBanner {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(204, 228, 253);
+    justify-content: center;
+    padding: 70px;
+}
+
+.bannerTitle {
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(44, 44, 145)
+}
+
+.bannerContent {
+    font-size: large;
+}
+
+.bannerImg {
+    max-height: 300px;
+    margin: 20px;
+    border: white 10px solid;
+}
+
+.bannerDescription {
+    padding: 20px;
+    max-width: 30%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.lessonTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+    text-decoration: none;
+    color:rgb(44, 44, 145);
+    font-weight: bold;
+}
+
+.lessonTitle:hover {
+    color:rgb(109, 109, 182);
+}
+
+.lessonText {
+    display: flex;
+    font-size: large;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.lessonImg {
+    max-width: 250px;
+    max-height: 250px;
+}

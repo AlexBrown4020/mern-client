@@ -1,0 +1,46 @@
+.navbar{
+    height: 50px;
+    background-color:rgb(44, 44, 145);
+    display: flex;
+    justify-content: center;
+}
+
+.navContainer{
+    width: 100%;
+    max-width: 1024px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.logo{
+    font-weight: 500;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.logoImg {
+    max-height: 120px;
+    max-width: 120px;
+    margin-top: 9%;
+    border: 4px solid rgb(44, 44, 145);
+}
+
+.navButton{
+    margin-left:20px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:rgb(44, 44, 145)
+}
+
+.navLink{
+    color:white;
+    padding: 5px;
+    margin: 5px;
+    border:2px solid white;
+    border-radius: 3px;
+}
