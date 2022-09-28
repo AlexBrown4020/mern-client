@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Footer } from '../footer/Footer';
 
 export const Login = () => {
+const host = process.env.host;
 const [username, setUsername] = useState('');
 const [password, setPassword] = useState('');
 const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ useEffect(() => {
 });
 
 const submitData = async () => {
-    let result = await fetch('http://localhost:8000/auth/login', {
+    let result = await fetch(`${host}/auth/login`, {
         method:'post',
         body: JSON.stringify({
             username, email, password

@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { Footer } from '../footer/Footer';
 
 export const Registration = () => {
+    const host = process.env.host;
     const [username, setName]=useState('');
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
@@ -19,7 +20,7 @@ export const Registration = () => {
     });
 
     const submitData = async () => {
-        let result = await fetch('http://localhost:8000/users', {
+        let result = await fetch(`${host}/users`, {
             method:'post',
             body: JSON.stringify({
                 username, email, password

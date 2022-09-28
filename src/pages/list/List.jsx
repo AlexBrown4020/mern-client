@@ -5,7 +5,8 @@ import useFetch from '../../hooks/useFetch';
 import './list.css';
 
 export const List = () => {
-    const {data, loading } = useFetch('https://nameless-waters-45397.herokuapp.com/lessons');
+    const host = process.env.host;
+    const {data, loading } = useFetch(`${host}/lessons`);
 
     return (
         <div>

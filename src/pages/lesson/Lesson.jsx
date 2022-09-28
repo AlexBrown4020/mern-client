@@ -7,13 +7,13 @@ import useFetch from '../../hooks/useFetch';
 import './lesson.css';
 
 export const Lesson = () => {
+  const host = process.env.host;
   const param = useParams();
-  const {data, loading } = useFetch(`/lessons/${param.id}`);
+  const {data, loading } = useFetch(`${host}/lessons/${param.id}`);
   const auth = localStorage.getItem('user');
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(auth)
     if (auth === null) {
       alert('You must be logged in to see the lesson')
       navigate('/')
@@ -21,7 +21,7 @@ export const Lesson = () => {
 });
 
   const deleteLesson = async (id) => {
-    let lesson = await fetch(`http://localhost:3000/lessons/${id}`, {
+    let lesson = await fetch(`${host}/lessons/${id}`, {
       method: 'delete'
     });
     lesson = await lesson.json();
@@ -34,9 +34,9 @@ export const Lesson = () => {
   const handleJoin = async (id) => {
     const username = JSON.parse(auth).username
     const prevParticipants = data.participants;
-    let result = await fetch(`http://localhost:8000/lessons/${id}`)
+    let result = await fetch(`${host}lessons/${id}`)
     if (prevParticipants.includes(username)) {
-      result = await fetch(`http://localhost:8000/lessons/${id}`, {
+      result = await fetch(`${host}/lessons/${id}`, {
         method: 'put',
         body: JSON.stringify({
           participants: [...prevParticipants].filter(el => el !== username)
@@ -48,7 +48,7 @@ export const Lesson = () => {
       alert('Left lesson');
       navigate('/')
     } else {
-      result = await fetch(`http://localhost:8000/lessons/${id}`, {
+      result = await fetch(`${host}/lessons/${id}`, {
         method: 'put',
         body: JSON.stringify({
           participants: [...prevParticipants, username]

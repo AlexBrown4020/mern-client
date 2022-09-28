@@ -7,6 +7,7 @@ import '../registration/registration.css'
 import { Footer } from '../footer/Footer';
 
 export const CreateLesson = () => {
+    const host = process.env.host;
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
@@ -22,7 +23,7 @@ export const CreateLesson = () => {
     });
 
     const submitData = async () => {
-        let result = await fetch('http://localhost:8000/lessons', {
+        let result = await fetch(`${host}/lessons`, {
             method:'post',
             body: JSON.stringify({
                 title, date, description, creator
