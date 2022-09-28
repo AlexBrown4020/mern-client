@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import useFetch from '../../hooks/useFetch';
 import './list.css';
 
 export const List = () => {
-    const {data, loading, error} = useFetch('/lessons');
+    const {data, loading } = useFetch('/lessons');
 
     return (
         <div>
@@ -15,7 +15,7 @@ export const List = () => {
                     <p className='bannerContent' >Looking for a class in Yoga? body balance? Tai-chi? Pilates? With over 400 registered teachers on our platform, you can find any class you like!</p>
                     <p className='bannerContent'>Have a look at our list of classes below, join up, and look out for the session details in your email</p>
                 </div>
-                <img className='bannerImg' src='https://media.self.com/photos/587e8bc713e257b344659432/master/w_960,c_limit/sky-ting-yoga-downward-dog-pose.jpg'/>
+                <img alt='ladies doing yoga banner' className='bannerImg' src='https://media.self.com/photos/587e8bc713e257b344659432/master/w_960,c_limit/sky-ting-yoga-downward-dog-pose.jpg'/>
             </div>
             <div className='mainTitleContainer'>
                 <h2 className='mainTitle'>Upcoming Lessons</h2>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom';
 
 import { Footer } from '../../components/footer/Footer';
@@ -8,7 +8,7 @@ import './lesson.css';
 
 export const Lesson = () => {
   const param = useParams();
-  const {data, loading, error} = useFetch(`/lessons/${param.id}`);
+  const {data, loading } = useFetch(`/lessons/${param.id}`);
   const auth = localStorage.getItem('user');
   const navigate = useNavigate();
 

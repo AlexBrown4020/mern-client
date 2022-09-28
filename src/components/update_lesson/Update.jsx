@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Navbar } from '../navbar/Navbar';
 import '../registration/registration.css'
-import useFetch from '../../hooks/useFetch';
 
 export const UpdateLesson = () => {
     const [title, setTitle] = useState('');
@@ -12,7 +11,6 @@ export const UpdateLesson = () => {
     const [description, setDescription] = useState('');
     const navigate = useNavigate();
     const param = useParams();
-    const {data, loading, error} = useFetch(`/lessons/${param.id}`);
     
     useEffect(() => {
         const auth = localStorage.getItem('user');
