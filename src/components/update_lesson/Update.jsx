@@ -6,7 +6,6 @@ import { Navbar } from '../navbar/Navbar';
 import '../registration/registration.css'
 
 export const UpdateLesson = () => {
-    const host = process.env.host;
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
@@ -21,7 +20,7 @@ export const UpdateLesson = () => {
     });
 
     const submitData = async (props) => {
-        let result = await fetch(`${host}/lessons/${param.id}`, {
+        let result = await fetch(`https://nameless-waters-45397.herokuapp.com/lessons/${param.id}`, {
             method:'put',
             body: JSON.stringify({
                 title, date, description

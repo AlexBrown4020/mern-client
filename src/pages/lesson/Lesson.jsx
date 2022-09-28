@@ -7,9 +7,8 @@ import useFetch from '../../hooks/useFetch';
 import './lesson.css';
 
 export const Lesson = () => {
-  const host = process.env.host;
   const param = useParams();
-  const {data, loading } = useFetch(`${host}/lessons/${param.id}`);
+  const {data, loading } = useFetch(`https://nameless-waters-45397.herokuapp.com/lessons/${param.id}`);
   const auth = localStorage.getItem('user');
   const navigate = useNavigate();
 
@@ -21,7 +20,7 @@ export const Lesson = () => {
 });
 
   const deleteLesson = async (id) => {
-    let lesson = await fetch(`${host}/lessons/${id}`, {
+    let lesson = await fetch(`https://nameless-waters-45397.herokuapp.com/lessons/${id}`, {
       method: 'delete'
     });
     lesson = await lesson.json();
@@ -34,9 +33,9 @@ export const Lesson = () => {
   const handleJoin = async (id) => {
     const username = JSON.parse(auth).username
     const prevParticipants = data.participants;
-    let result = await fetch(`${host}lessons/${id}`)
+    let result = await fetch(`https://nameless-waters-45397.herokuapp.com/lessons/${id}`)
     if (prevParticipants.includes(username)) {
-      result = await fetch(`${host}/lessons/${id}`, {
+      result = await fetch(`https://nameless-waters-45397.herokuapp.com/lessons/${id}`, {
         method: 'put',
         body: JSON.stringify({
           participants: [...prevParticipants].filter(el => el !== username)
@@ -48,7 +47,7 @@ export const Lesson = () => {
       alert('Left lesson');
       navigate('/')
     } else {
-      result = await fetch(`${host}/lessons/${id}`, {
+      result = await fetch(`https://nameless-waters-45397.herokuapp.com/lessons/${id}`, {
         method: 'put',
         body: JSON.stringify({
           participants: [...prevParticipants, username]
