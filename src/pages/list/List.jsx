@@ -14,9 +14,6 @@ export const List = () => {
                     <h2 className='bannerTitle' >Welcome to Life in Balance!</h2>
                     <p className='bannerContent' >Looking for a class in Yoga? body balance? Tai-chi? Pilates? With over 400 registered teachers on our platform, you can find any class you like!</p>
                     <p className='bannerContent'>Have a look at our list of classes below, join up, and look out for the session details in your email</p>
-                    <p>Dev Note: Data may not be shown and login information unusuable due to a separate backend API hosted with Heroku.  Try loading up the server on the following URL to have access to the database:</p>
-                    <a href='https://nameless-waters-45397.herokuapp.com/'>Heroku API</a>
-                    <p>Once data is accessible, you can create your own account, but non-admin users cannot access the create lesson page.</p>
                 </div>
                 <img alt='ladies doing yoga banner' className='bannerImg' src='https://media.self.com/photos/587e8bc713e257b344659432/master/w_960,c_limit/sky-ting-yoga-downward-dog-pose.jpg'/>
             </div>
