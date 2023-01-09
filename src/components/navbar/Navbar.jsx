@@ -1,3 +1,5 @@
+import Button from '@mui/material/Button';
+
 import './navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -18,15 +20,15 @@ export const Navbar = () => {
                 <ul className='navItems'>
 
                 { 
-                    auth && JSON.parse(auth).isAdmin ?  <Link className='navLink' to={'/create_lesson'}>Create Lesson</Link> 
+                    auth && JSON.parse(auth).isAdmin ?  <Button className='navLink' href={'/create_lesson'}>Create Lesson</Button> 
                     : <></>  
                 }
                     
                 {   
-                    auth ? <Link className='navLink' onClick={logout} to='/'>Logout</Link> 
+                    auth ? <Button className='navLink' onClick={logout} to='/'>Logout</Button> 
                     : <>
-                        <Link className='navLink'to={'/register'}>Register</Link>
-                        <Link className='navLink' to={'/login'}>Login</Link>
+                        <Button className='navLink' href={'/register'}>Register</Button>
+                        <Button className='navLink' href={'/login'}>Login</Button>
                     </>}
                 </ul>
             </div>
