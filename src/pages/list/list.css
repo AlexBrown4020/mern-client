@@ -24,12 +24,6 @@
     border: 1px solid rgb(204, 228, 253);
 }
 
-.mainTitleContainer {
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid rgb(109, 109, 182);
-}
-
 .lessonContent {
     display: flex;
     flex-direction: column;
@@ -43,22 +37,30 @@
     justify-content: space-evenly;
 }
 
-.mainTitle {
-    font-family: Arial, Helvetica, sans-serif;
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
 .mainBanner {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
 }
 
-.bannerTitle {
+.mainTitleContainer {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid rgb(109, 109, 182);
+}
+
+.mainTitle {
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     color:rgb(44, 44, 145);
-    margin-top: 20%;
 }
 
 .bannerContent {
@@ -68,6 +70,10 @@
 @media screen and (min-width: 601px) {
     .mainBanner {
         flex-direction: row;
+    }
+
+    .bannerTitle {
+        margin-top: 10%;
     }
 
     .bannerImg {
@@ -83,6 +89,10 @@
 @media screen and (max-width: 600px) {
     .mainBanner {
         flex-direction: column;
+    }
+
+    .bannerTitle {
+        margin-top: 20%;
     }
 
     .bannerImg {
