@@ -9,9 +9,9 @@ export const List = () => {
 
     return (
         <div>
+            <h2 className='bannerTitle' >Welcome to Life in Balance!</h2>
             <div className='mainBanner'>
                 <div className='bannerDescription'>
-                    <h2 className='bannerTitle' >Welcome to Life in Balance!</h2>
                     <p className='bannerContent' >Looking for a class in Yoga? body balance? Tai-chi? Pilates? With over 400 registered teachers on our platform, you can find any class you like!</p>
                     <p className='bannerContent'>Have a look at our list of classes below, join up, and look out for the session details in your email</p>
                 </div>
