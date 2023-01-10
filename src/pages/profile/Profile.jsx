@@ -1,4 +1,4 @@
-import { useState } from '../../hooks/useFetch';
+import { useState } from 'react';
 import './profile.css';
 
 export const Profile = () => {
