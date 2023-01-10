@@ -11,6 +11,7 @@ import { CreateLesson } from './components/create_lesson/CreateLesson';
 import { Private } from './components/private_components/Private';
 import { Login } from './components/login/Login';
 import { UpdateLesson } from './components/update_lesson/Update';
+import { Profile } from './pages/profile/Profile';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path='/register' element={<Registration/>}/>
         <Route path='/login' element={<Login/>} />
         <Route path='lessons/:id/update' element={<UpdateLesson/>} />
-        <Route path='/profile' element={<UpdateLesson/>} />
+        <Route path='/profile' element={<Profile/>} />
         <Route element={<Private/>}>
           <Route path='/create_lesson' element={<CreateLesson/>}/>
         </Route>
