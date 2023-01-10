@@ -31,28 +31,28 @@ export const List = () => {
                 <div className='lessonList'>
                     {data.map(lesson => {
                         return <div key={lesson._id} className='listContainer' >
-                            <div >
-                                <img alt='default placehodler of group stretching' className='lessonImg' src='https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2014/12/gentle-yoga-class.jpeg?w=1080&ssl=1'></img>
-                            </div>
-                            <Link className='lessonTitle' to={`/lessons/${lesson._id}`} >
-                                {lesson.title}
-                            </Link>
-                            <div className='lessonContent'>
-                                <div className='contentBlock'>
-                                    <p className='lessonText'>Date: </p> 
-                                    <p>{lesson.date.slice(0,10)}</p>
+                                <div >
+                                    <img alt='default placehodler of group stretching' className='lessonImg' src='https://i0.wp.com/www.yogabasics.com/yogabasics2017/wp-content/uploads/2014/12/gentle-yoga-class.jpeg?w=1080&ssl=1'></img>
                                 </div>
-                                <div className='contentBlock'>
-                                    <p className='lessonText'>Teacher: </p> 
-                                    <p>{lesson.creator}</p>
+                                <Link className='lessonTitle' to={`/lessons/${lesson._id}`} >
+                                    {lesson.title}
+                                </Link>
+                                <div className='lessonContent'>
+                                    <div className='contentBlock'>
+                                        <p className='lessonText'>Date: </p> 
+                                        <p>{lesson.date.slice(0,10)}</p>
+                                    </div>
+                                    <div className='contentBlock'>
+                                        <p className='lessonText'>Teacher: </p> 
+                                        <p>{lesson.creator}</p>
+                                    </div>
+                                    <div className='contentBlock'>
+                                        <p className='lessonText'>Paticipants: </p> 
+                                        {lesson.participants.map(el => {
+                                            return <p key={el} >{el}</p>
+                                        })}
+                                    </div>
                                 </div>
-                                <div className='contentBlock'>
-                                    <p className='lessonText'>Paticipants: </p> 
-                                    {lesson.participants.map(el => {
-                                        return <p key={el} >{el}</p>
-                                    })}
-                                </div>
-                            </div>
                         </div>
                     })}
                 </div>
