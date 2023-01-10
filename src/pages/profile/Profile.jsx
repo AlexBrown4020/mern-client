@@ -1,5 +1,5 @@
 import { useState } from '../../hooks/useFetch';
-import './login.css';
+import './profile.css';
 
 export const List = () => {
     const [username, setUsername] = useState('');

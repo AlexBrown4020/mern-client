@@ -22,6 +22,7 @@ function App() {
         <Route path='/register' element={<Registration/>}/>
         <Route path='/login' element={<Login/>} />
         <Route path='lessons/:id/update' element={<UpdateLesson/>} />
+        <Route path='/profile' element={<UpdateLesson/>} />
         <Route element={<Private/>}>
           <Route path='/create_lesson' element={<CreateLesson/>}/>
         </Route>
