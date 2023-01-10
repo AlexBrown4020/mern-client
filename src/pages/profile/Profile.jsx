@@ -21,6 +21,12 @@ export const Profile = () => {
             {
                 user ? <div>
                     <Navbar/>
+                    <div className='profileBody'>
+                        <section className='profileContainer'>
+                            <p>{user.username}</p>
+                            <p>{user.email}</p>
+                        </section>
+                    </div>
                     <Footer/>
                 </div>
                 : <></>
