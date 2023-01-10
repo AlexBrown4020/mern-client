@@ -11,6 +11,7 @@
     flex-direction: column;
     max-width: 40%;
     margin: 10px;
+    border: 1px solid rgb(204, 228, 253);
 }
 
 .lessonTitle {
@@ -34,9 +35,8 @@
 
 .contentBlock {
     display: flex;
+    justify-content: left;
     align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
 }
 
 #banner {
@@ -86,6 +86,12 @@
         border: white 10px solid;
         position: relative
     }
+    .listContainer {
+        max-width:30%;
+    }
+    .lessonImg {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -103,6 +109,12 @@
         max-height: 160px;
         margin: 5px;
         border: white 2px solid;
+    }
+    .listContainer {
+        max-width:40%;
+    }
+    .lessonImg {
+        max-width: 100%;
     }
 }
 
@@ -129,9 +141,4 @@
     font-size: large;
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
-}
-
-.lessonImg {
-    max-width: 250px;
-    max-height: 250px;
 }
