@@ -1,12 +1,28 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react'
+
+import { Navbar } from '../../components/navbar/Navbar';
 import './profile.css';
 
 export const Profile = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [email, setEmail] = useState('');
+    const user = JSON.parse(localStorage.getItem('user'))
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (user === null) {
+          alert('You must be logged in to see the lesson')
+          navigate('/')
+        }
+    });
 
     return (
-        console.log(username, email)
+        <>
+            {
+                user ? <div>
+                    <Navbar/>
+                </div>
+                : <>No</>
+            } 
+        </>
     )
 };
