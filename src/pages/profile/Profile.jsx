@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect } from 'react'
 
-import { Navbar } from '../../components/navbar/Navbar';
 import './profile.css';
+import { Navbar } from '../../components/navbar/Navbar';
+import { Footer } from '../../components/footer/Footer';
 
 export const Profile = () => {
     const user = JSON.parse(localStorage.getItem('user'))
@@ -20,8 +21,9 @@ export const Profile = () => {
             {
                 user ? <div>
                     <Navbar/>
+                    <Footer/>
                 </div>
-                : <>No</>
+                : <></>
             } 
         </>
     )
