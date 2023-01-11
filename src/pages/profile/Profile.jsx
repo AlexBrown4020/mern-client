@@ -20,20 +20,18 @@ export const Profile = () => {
         <>
             {
                 user ? 
-                    <div id='profileBody'>
-                        <Navbar/>
-                        <div id='profileContainer'>
-                            <div className='content'>
-                                <p>Username: {user.username}</p>
-                            </div>
-                            <div className='content'>
-                                <p>Email: {user.email}</p>
-                            </div>
+                <div id='profileBody'>
+                    <Navbar/>
+                    <div id='profileContainer'>
+                        <div className='content'>
+                            <p>Username: {user.username}</p>
                         </div>
-                        <div className='remaining'>
+                        <div className='content'>
+                            <p>Email: {user.email}</p>
                         </div>
-                    <Footer/>
+                        <Footer/>
                     </div>
+                </div>
                 : <></>
             } 
         </>
