@@ -1,0 +1,32 @@
+#profileBody {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
+    background-color: rgb(245, 245, 245);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#profileContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 70%;
+}
+
+.content {
+    display: flex;
+    margin-left: 10%;
+    width: 70%;
+}
+
+.remaining {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%; 
+}

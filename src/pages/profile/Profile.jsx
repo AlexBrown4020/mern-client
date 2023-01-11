@@ -19,16 +19,21 @@ export const Profile = () => {
     return (
         <>
             {
-                user ? <div>
-                    <Navbar/>
-                    <div className='profileBody'>
-                        <section className='profileContainer'>
-                            <p>{user.username}</p>
-                            <p>{user.email}</p>
-                        </section>
-                    </div>
+                user ? 
+                    <div id='profileBody'>
+                        <Navbar/>
+                        <div id='profileContainer'>
+                            <div className='content'>
+                                <p>Username: {user.username}</p>
+                            </div>
+                            <div className='content'>
+                                <p>Email: {user.email}</p>
+                            </div>
+                        </div>
+                        <div className='remaining'>
+                        </div>
                     <Footer/>
-                </div>
+                    </div>
                 : <></>
             } 
         </>

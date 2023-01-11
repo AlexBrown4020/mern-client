@@ -3,6 +3,7 @@
     background-color:rgb(157, 157, 209);
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .navContainer{
@@ -25,6 +26,20 @@
     color: rgb(232, 225, 225);
 }
 
+.navLink {
+    text-decoration: none;
+    border:rgb(44, 44, 145) 3px solid;
+    color: rgb(44, 44, 145);
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+}
+
+.navLink:hover{
+    border:rgb(232, 225, 225) 3px solid;
+    color: rgb(232, 225, 225);
+} 
+
 @media screen and (min-width: 601px){
     .logo {
         font-size: 40px;
@@ -33,6 +48,11 @@
         max-height: 120px;
         margin-top: 9%;
         border: 4px solid rgb(157, 157, 209);
+    }
+    .navLink {
+        margin: 10px;
+        padding: 5px;
+        font-size: 20px;
     }
 }
 
@@ -46,23 +66,13 @@
         margin-top: 9%;
         border: 4px solid rgb(157, 157, 209);
     }
+    .navLink {
+        margin: 3px;
+        padding: 2px;
+        font-size: 10px;
+        margin-right: 3px;
+    }
 }
-
-.navLink {
-    text-decoration: none;
-    border:rgb(44, 44, 145) 3px solid;
-    color: rgb(44, 44, 145);
-    font-weight: 100;
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-.navLink:hover{
-    border:rgb(232, 225, 225) 3px solid;
-    color: rgb(232, 225, 225);
-} 
 
 .navItems {
     display: flex;
