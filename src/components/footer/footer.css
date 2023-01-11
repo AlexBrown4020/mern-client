@@ -1,11 +1,31 @@
 .footer {
     background-color: rgb(225, 235, 246);
     display: flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content:space-around;
     align-items: center;
+}
+
+.footerDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
 }
 
 .creatorDetails {
     opacity: 60%;
-    color:blue
+    color:blue;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .footer {
+        font-size: 20px;
+    }
 }
