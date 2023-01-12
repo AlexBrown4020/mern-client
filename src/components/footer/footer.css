@@ -4,13 +4,18 @@
     flex-direction: column;
     justify-content:space-around;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    width: 100%;
 }
 
 .footerDetails {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 50%;
 }
 
 .creatorDetails {

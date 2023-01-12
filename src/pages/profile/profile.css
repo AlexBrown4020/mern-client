@@ -19,14 +19,11 @@
     margin-top: 50px;
 }
 
-Footer {
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
+html {
+    min-height: 100%;
+    position: relative;
 }
 
-html,
 body {
     background-color: rgb(245, 245, 245);
     height: 100%;
