@@ -16,11 +16,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-.creatorDetails {
-    opacity: 60%;
-    color:blue;
+    width: 100%;
+    align-items: center;
 }
 
 .contactImg {
@@ -32,7 +29,6 @@
         font-size: 15px;
     }
     .contactImg {
-        margin-top: 5px;
         max-height: 40px;
     }
 }
@@ -42,7 +38,6 @@
         font-size: 20px;
     }
     .contactImg {
-        margin-top: 5px;
-        max-height: 50px;
+        max-height: 40px;
     }
 }
