@@ -23,12 +23,31 @@ export const Profile = () => {
                 <div id='profileBody'>
                     <Navbar/>
                     <div id='profileContainer'>
-                        <div className='content'>
-                            <p>Username: {user.username}</p>
+                        <div className='subContainer'>
+                            <div className='content'>
+                                <p>Username: </p>
+                                <p>{user.username}</p>
+                            </div>
+                            <div className='content'>
+                                <p>Email: </p>
+                                <p>{user.email}</p>
+                            </div>
                         </div>
-                        <div className='content'>
-                            <p>Email: {user.email}</p>
+
+                        <div className='subContainer'>
+                            <div className='warning'>
+                                <p>Warning: This is a mock business website, do not enter your actual banking information</p>
+                            </div>
+                            <div className='content'>
+                                <p>Credit/Debit Card: </p>
+                                <input className='ccInput'></input>
+                            </div>
+                            <div className='content'>
+                                <p>Security Number: </p>
+                                <input className='secInput'></input>
+                            </div>
                         </div>
+
                         <Footer/>
                     </div>
                 </div>
