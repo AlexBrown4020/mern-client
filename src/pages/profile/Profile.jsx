@@ -9,6 +9,15 @@ export const Profile = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const navigate = useNavigate();
 
+    const ccInput = (val) => {
+        val = parseInt(val.key);
+        if (typeof val === "number") {
+            
+        } else {
+            
+        }
+    }
+
     useEffect(() => {
         if (user === null) {
           alert('You must be logged in to see the lesson')
@@ -40,11 +49,11 @@ export const Profile = () => {
                             </div>
                             <div className='content'>
                                 <p>Credit/Debit Card: </p>
-                                <input className='ccInput'></input>
+                                <input className='ccInput' onKeyPress={(val) => ccInput(val)}></input>
                             </div>
                             <div className='content'>
                                 <p>Security Number: </p>
-                                <input className='secInput'></input>
+                                <input className='secInput' ></input>
                             </div>
                         </div>
 
