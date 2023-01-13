@@ -25,12 +25,12 @@ export const Profile = () => {
                     <div id='profileContainer'>
                         <div className='subContainer'>
                             <div className='content'>
-                                <p>Username: </p>
-                                <p>{user.username}</p>
+                                <p className='contentText'>Username: </p>
+                                <p className='contentText'>{user.username}</p>
                             </div>
                             <div className='content'>
-                                <p>Email: </p>
-                                <p>{user.email}</p>
+                                <p className='contentText'>Email: </p>
+                                <p className='contentText'>{user.email}</p>
                             </div>
                         </div>
 
