@@ -33,6 +33,7 @@ export const Profile = () => {
                     <Navbar/>
                     <div id='profileContainer'>
                         <div className='subContainer'>
+                            <h2 id='title'>Profile</h2>
                             <div className='content'>
                                 <p className='contentText'>Username: </p>
                                 <p className='contentText'>{user.username}</p>
