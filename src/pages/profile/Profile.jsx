@@ -9,13 +9,22 @@ export const Profile = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const navigate = useNavigate();
 
-    const [privateInfo, setPrivateInfo] = useState("")
+    const [privateInfo, setPrivateInfo] = useState("");
+    const [secInfo, setSecInfo] = useState("");
 
     const ccInput = (e) => {
         setPrivateInfo(e.target.value);
         if (e.target.value.length >= 13) {
             e.target.value = e.target.value.slice(0, 12);
             setPrivateInfo(e.target.value.slice(0, 12));
+        }
+    }
+
+    const secInput = (e) => {
+        setSecInfo(e.target.value);
+        if (e.target.value.length >= 4) {
+            e.target.value = e.target.value.slice(0, 3);
+            setPrivateInfo(e.target.value.slice(0, 3));
         }
     }
 
@@ -55,7 +64,7 @@ export const Profile = () => {
                             </div>
                             <div className='content'>
                                 <p>Security Number: </p>
-                                <input className='secInput'/>
+                                <input type="number" className='secInput' onInput={secInput}/>
                             </div>
                         </div>
 
