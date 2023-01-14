@@ -14,7 +14,6 @@ export const Profile = () => {
     const ccInput = (e) => {
         setPrivateInfo(e.target.value);
         if (e.target.value.length >= 13) {
-            window.alert("Card information cannot be longer than 12 digits");
             e.target.value = e.target.value.slice(0, 12);
             setPrivateInfo(e.target.value.slice(0, 12));
         }
@@ -52,7 +51,7 @@ export const Profile = () => {
                             </div>
                             <div className='content'>
                                 <p>Credit/Debit Card: </p>
-                                <input type="number"  className='ccInput' onInput={ccInput}/>
+                                <input type="number" className='ccInput' onInput={ccInput}/>
                             </div>
                             <div className='content'>
                                 <p>Security Number: </p>
