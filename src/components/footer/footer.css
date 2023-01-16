@@ -1,11 +1,43 @@
 .footer {
     background-color: rgb(225, 235, 246);
     display: flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    width: 100%;
+}
+
+.footerDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
 }
 
-.creatorDetails {
-    opacity: 60%;
-    color:blue
+.contactImg {
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 15px;
+    }
+    .contactImg {
+        max-height: 40px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .footer {
+        font-size: 20px;
+    }
+    .contactImg {
+        max-height: 40px;
+    }
 }

@@ -23,8 +23,10 @@ export const Navbar = () => {
                 }
                     
                 {   
-                    auth ? <Link className='navLink' onClick={logout} to={'/'}>Logout</Link> 
-                    : <>
+                    auth ? <>
+                    <Link className='navLink' onClick={logout} to={'/'}>Logout</Link> 
+                        <Link className='navLink' to={'/profile'}>Profile</Link>
+                        </> : <>
                         <Link className='navLink' to={'/register'}>Register</Link>
                         <Link className='navLink' to={'/login'}>Login</Link>
                     </>}
