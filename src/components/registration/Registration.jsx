@@ -22,7 +22,7 @@ export const Registration = () => {
         let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users`, {
             method:'post',
             body: JSON.stringify({
-                username, email, password, photo, creditCard, securityNumber
+                username, email, password
             }),
             headers: {
                 'Content-Type':'application/json'
