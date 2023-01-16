@@ -25,7 +25,7 @@ export const Profile = () => {
         const prevInfo = secInfo;
         setSecInfo(e.target.value);
         if (e.target.value.length >= 4) {
-            e.target.value = secInfo;
+            e.target.value = e.target.value.slice(0, 3);
             setPrivateInfo(prevInfo);
         }
     }
