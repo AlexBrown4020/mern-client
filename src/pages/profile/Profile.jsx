@@ -9,26 +9,41 @@ export const Profile = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const navigate = useNavigate();
 
-    const [privateInfo, setPrivateInfo] = useState("");
-    const [secInfo, setSecInfo] = useState("");
+    const [creditCard, setCreditCard] = useState("");
+    const [securityNumber, setSecurityNumber] = useState("");
 
     const ccInput = (e) => {
-        let prevInfo = privateInfo;
-        setPrivateInfo(e.target.value);
+        let prevInfo = creditCard;
+        setCreditCard(e.target.value);
         if (e.target.value.length >= 13) {
             e.target.value = prevInfo
-            setPrivateInfo(prevInfo);
+            setCreditCard(prevInfo);
         }
     }
 
     const secInput = (e) => {
-        const prevInfo = secInfo;
-        setSecInfo(e.target.value);
+        const prevInfo = securityNumber;
+        setSecurityNumber(e.target.value);
         if (e.target.value.length >= 4) {
             e.target.value = e.target.value.slice(0, 3);
-            setPrivateInfo(prevInfo);
+            setSecurityNumber(prevInfo);
         }
     }
+
+    const submitCC = async () => {
+        let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users`, {
+            method:'post',
+            body: JSON.stringify({
+                creditCard,
+                securityNumber
+            }),
+            headers: {
+                'Content-Type':'application/json'
+            }
+        });
+        result = await result.json();
+        localStorage.setItem('user', JSON.stringify(result))
+    };
 
     useEffect(() => {
         if (user === null) {
@@ -68,6 +83,7 @@ export const Profile = () => {
                                 <p>Security Number: </p>
                                 <input type="number" className='secInput' onInput={secInput}/>
                             </div>
+                            <button onClick={submitCC} className='submissionButton' type='button'>Submit</button>
                         </div>
 
                         <Footer/>
