@@ -13,18 +13,20 @@ export const Profile = () => {
     const [secInfo, setSecInfo] = useState("");
 
     const ccInput = (e) => {
+        let prevInfo = privateInfo;
         setPrivateInfo(e.target.value);
         if (e.target.value.length >= 13) {
-            e.target.value = e.target.value.slice(0, 12);
-            setPrivateInfo(e.target.value.slice(0, 12));
+            e.target.value = prevInfo
+            setPrivateInfo(prevInfo);
         }
     }
 
     const secInput = (e) => {
+        const prevInfo = secInfo;
         setSecInfo(e.target.value);
         if (e.target.value.length >= 4) {
-            e.target.value = e.target.value.slice(0, 3);
-            setPrivateInfo(e.target.value.slice(0, 3));
+            e.target.value = secInfo;
+            setPrivateInfo(prevInfo);
         }
     }
 
