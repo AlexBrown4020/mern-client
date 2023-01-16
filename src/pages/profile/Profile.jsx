@@ -6,9 +6,8 @@ import { Navbar } from '../../components/navbar/Navbar';
 import { Footer } from '../../components/footer/Footer';
 
 export const Profile = () => {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const user = JSON.parse(localStorage.getItem('user'));
     const navigate = useNavigate();
-
     const [creditCard, setCreditCard] = useState("");
     const [securityNumber, setSecurityNumber] = useState("");
 
@@ -16,7 +15,7 @@ export const Profile = () => {
         let prevInfo = creditCard;
         setCreditCard(e.target.value);
         if (e.target.value.length >= 13) {
-            e.target.value = prevInfo
+            e.target.value = prevInfo;
             setCreditCard(prevInfo);
         }
     }
@@ -31,8 +30,8 @@ export const Profile = () => {
     }
 
     const submitCC = async () => {
-        let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users`, {
-            method:'post',
+            let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users`, {
+            method:'put',
             body: JSON.stringify({
                 creditCard,
                 securityNumber
@@ -42,20 +41,21 @@ export const Profile = () => {
             }
         });
         result = await result.json();
-        localStorage.setItem('user', JSON.stringify(result))
+        localStorage.setItem('user', JSON.stringify(result));
+        alert('Banking information added');
+        navigate('/');
     };
 
     useEffect(() => {
         if (user === null) {
-          alert('You must be logged in to see the lesson')
-          navigate('/')
+          alert('You must be logged in to see the lesson');
+          navigate('/');
         }
     });
 
     return (
         <>
             {
-                user ? 
                 <div id='profileBody'>
                     <Navbar/>
                     <div id='profileContainer'>
@@ -69,8 +69,15 @@ export const Profile = () => {
                                 <p className='contentText'>Email: </p>
                                 <p className='contentText'>{user.email}</p>
                             </div>
-                        </div>
 
+                                {
+                                    creditCard ? 
+                                    <div className='content'>
+                                        <p className='contentText'> Credit Card:</p>
+                                    </div>
+                                    :
+                                    <></>
+                                }
                         <div className='subContainer'>
                             <div className='warning'>
                                 <p>Warning: This is a mock business website, do not enter your actual banking information</p>
@@ -90,6 +97,7 @@ export const Profile = () => {
                     </div>
                 </div>
                 : <></>
+            </div>
             } 
         </>
     )
