@@ -24,6 +24,7 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='lessons/:id/update' element={<UpdateLesson/>} />
         <Route path='/profile' element={<Profile/>} />
+        <Route path='/profile/user/:id' element={<Profile/>} />
         <Route element={<Private/>}>
           <Route path='/create_lesson' element={<CreateLesson/>}/>
         </Route>

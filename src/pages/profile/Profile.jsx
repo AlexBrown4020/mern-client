@@ -30,7 +30,7 @@ export const Profile = () => {
     }
 
     const submitCC = async () => {
-            let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users`, {
+            let result = await fetch(`https://nameless-waters-45397.herokuapp.com/users/${user._id}`, {
             method:'put',
             body: JSON.stringify({
                 creditCard,
@@ -40,10 +40,10 @@ export const Profile = () => {
                 'Content-Type':'application/json'
             }
         });
+        console.log(result)
         result = await result.json();
         localStorage.setItem('user', JSON.stringify(result));
         alert('Banking information added');
-        navigate('/');
     };
 
     useEffect(() => {
@@ -69,7 +69,6 @@ export const Profile = () => {
                                 <p className='contentText'>Email: </p>
                                 <p className='contentText'>{user.email}</p>
                             </div>
-
                                 {
                                     creditCard ? 
                                     <div className='content'>
