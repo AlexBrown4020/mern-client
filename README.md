@@ -16,8 +16,8 @@ This is the frontend repository for Life in Balance; a mock web application for 
 ## Tech Stack:
 ### Languages:
 - JavaScript
-- NodeJS
 ### Libraries:
+- ReactJS
 - MUI
 ### Other:
 - Netlify
